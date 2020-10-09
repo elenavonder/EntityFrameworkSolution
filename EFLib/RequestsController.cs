@@ -9,7 +9,7 @@ namespace EFLib
 {
     public class RequestsController
     {
-        private readonly prsContext _context;//readonly means you can only set the value in a contrsuctor
+        private readonly prsContext _context;//readonly means you can only set the value in a constructor
 
         public RequestsController(prsContext context)
         {

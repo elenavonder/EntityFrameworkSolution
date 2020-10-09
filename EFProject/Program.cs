@@ -10,6 +10,9 @@ namespace EFProject
         {
             var _context = new prsContext();
 
+            var vendors = _context.Vendors.ToList();
+            var IKEA = _context.Vendors.SingleOrDefault(v => v.Code == "IKEA");
+
             var RequCtrl = new RequestsController(_context);
 
             //see all the stasus' in review
