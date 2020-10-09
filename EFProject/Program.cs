@@ -12,6 +12,9 @@ namespace EFProject
 
             var RequCtrl = new RequestsController(_context);
 
+            //see all the stasus' in review
+            var requestInReview = RequCtrl.GetRequestsInReview();
+
             //check if total worked
             var updTotal = RequCtrl.RecalculateRequestTotal(1);
 

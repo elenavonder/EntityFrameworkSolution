@@ -16,6 +16,11 @@ namespace EFLib
             _context = context;
         }
 
+        public List<Requests> GetRequestsInReview()
+        {
+            return _context.Requests.Where(r => r.Status == "REVIEW").ToList();//tolist() give generic list of REVIEW
+        }
+
         public bool RecalculateRequestTotal (int Id)
         {
             var request = _context.Requests.Find(Id); //read the data
